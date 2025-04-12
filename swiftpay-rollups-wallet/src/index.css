@@ -1,0 +1,62 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222 47% 4%;
+    --foreground: 0 0% 100%;
+
+    --card: 222 47% 8%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 222 47% 8%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 210 100% 53%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 223 47% 15%;
+    --muted-foreground: 215 20% 75%;
+
+    --accent: 210 100% 53%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 210 100% 53%;
+
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-swiftpay-dark text-foreground antialiased min-h-screen;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-swiftpay-dark-accent/60 backdrop-blur-md border border-white/10 rounded-xl shadow-lg;
+  }
+  
+  .transaction-item {
+    @apply glass-card p-4 flex items-center justify-between mb-2;
+  }
+  
+  .bitcoin-gradient {
+    @apply bg-gradient-to-r from-swiftpay-blue to-swiftpay-light-blue;
+  }
+}
